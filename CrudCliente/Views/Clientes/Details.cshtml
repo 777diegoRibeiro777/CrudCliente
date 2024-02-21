@@ -1,0 +1,43 @@
+﻿@model CrudCliente.Models.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4 mt-10px text-center">Detalhes</h1>
+<hr />
+<div>
+    <dl class=" row d-flex justify-content-center">
+        <dt class="d-flex justify-content-center">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="d-flex justify-content-center">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt class="d-flex justify-content-center mt-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="d-flex justify-content-center">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt class="d-flex justify-content-center mt-3">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class="d-flex justify-content-center">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt class="d-flex justify-content-center mt-3">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class="d-flex justify-content-center">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    <div class="d-flex justify-content-around mt-5">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success shadow">Editar</a>
+        <a asp-action="Index" class="btn btn-primary shadow">⬅️ Voltar</a>
+    </div>
+</div>

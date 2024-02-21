@@ -1,0 +1,52 @@
+@Scripts.Render("~/bundles/inputmask")
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.mt-10px {
+    margin-top: 100px;
+}
+
+body {
+    color: black;
+    margin-bottom: 60px;
+    background-image: linear-gradient(180deg, #f2bfff 0, #d5aeff 25%, #b99df2 50%, #9e8cd6 75%, #867bbc 100%);
+}
+
+
+.design-nav {
+    color: black;
+    background: #ddc0ef;
+}
+
+
+#table_cliente {
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #6657b1;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CrudCliente.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 class="display-4 mt-10px text-center">Tabela Clientes</h1>
+
+<div class="d-flex justify-content-end">
+    <p>
+        <a asp-action="Create" class="btn btn-success shadow">Adicionar</a>
+    </p>
+</div>
+<table class="table" id="table_cliente">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary shadow-lg">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary shadow-lg">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger shadow-lg">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
